@@ -1,0 +1,120 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial;
+    font-size: 15px;
+    padding: 5%;
+}
+
+input{
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+select{
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+}
+
+a{
+    text-decoration: none;
+}
+
+.formCadastro{
+    width: 450px;
+    margin: 0 auto;
+    border-radius: 8px;
+    box-shadow: 1.5px 1.5px 5px #999999;
+}
+
+.formHeader{
+    position: relative;
+    border-bottom: 1px solid #999999;
+    padding: 10px;
+}
+
+.formHeader > h1{
+    margin-bottom: 5px;
+}
+
+.formHeader > p{
+    color: rgb(70, 70, 70);
+}
+
+.formHeader > .close{
+    position: absolute;
+    margin-left: 91%;
+    content: url('close.png');
+    cursor: pointer;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+.grid .subGrid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+    column-gap: 10px;
+}
+
+.radio{
+    border: 1px solid #666;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+p.termo{
+    font-size: 11px;
+    text-align: left;
+    color: rgb(70, 70, 70);
+}
+
+.formActions{
+    margin-top: 10px;
+    text-align: center;
+}
+
+.formActions > input[type="submit"]{
+    width: 40%;
+    background: #196b2b;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+}
+
+.subtitle{
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    color: rgb(70, 70, 70);
+}
+
+.subtitle > .info{
+    width: 10px;
+    padding: 2px;
+    margin-left: 5px;
+    background-color: rgb(70, 70, 70);
+    color: white;
+    font-size: 9px;
+    border-radius: 100%;
+    text-align: center;
+}
+
+#PersonalizadoContainer{
+    display: none;
+}
+
+.bottomSpace{
+    margin-bottom: 10px;
+}

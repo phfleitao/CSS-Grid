@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript">
+        
+        function MostrarPersonalizadoContainer(){
+            let container = document.getElementById("PersonalizadoContainer");
+            let generoElements = document.getElementsByName("Genero");
+            generoElements.forEach(function(e){
+                if(e.value == "P" && e.checked)
+                    container.style.display = "block";
+                else
+                    container.style.display = "none";
+            });
+        }      
+
+    </script>
+</head>
+<body>
+    <main>
+        <div class="formCadastro">
+            <div class="formHeader">
+                <a href="#" class="close" onclick="confirm('Fechar?');"></a>
+                <h1>Regista-te</h1>
+                <p>É rápido e fácil.</p>
+            </div>
+            <form class="grid" action="#">
+                <div class="subGrid">
+                    <input type="text" name="Nome" id="Nome" placeholder="Nome próprio">
+                    <input type="text" name="Sobrenome" id="Sobrenome" placeholder="Apelido">
+                    <input type="text" name="Sobrenome" id="Sobrenome" placeholder="Idade">
+                </div>
+                <input type="text" name="Utilizador" id="Utilizador" placeholder="Número de Telemóvel ou Email">
+                <input type="password" name="Senha" id="Senha" placeholder="Palavra-passe nova">
+    
+                <p class="subtitle">Data de Nascimento <a href="#" class='info' onclick="alert('INFO!');">?</a></p>
+                <div class="subGrid">
+                    <input list="DiaList" name="DtDiaList" id="DtDiaList" placeholder="Dia">
+                    <datalist id="DiaList">
+                        <option value="1">
+                        <option value="2">
+                        <option value="3">
+                        <option value="4">
+                        <option value="5">
+                        <option value="6">
+                        <option value="7">
+                        <option value="8">
+                        <option value="9">
+                        <option value="10">
+                        <option value="11">
+                        <option value="12">
+                        <option value="13">
+                        <option value="14">
+                        <option value="15">
+                        <option value="16">
+                        <option value="17">
+                        <option value="18">
+                        <option value="19">
+                        <option value="20">
+                        <option value="21">
+                        <option value="22">
+                        <option value="23">
+                        <option value="24">
+                        <option value="25">
+                        <option value="26">
+                        <option value="27">
+                        <option value="28">
+                        <option value="29">
+                        <option value="30">
+                        <option value="31">
+                    </datalist>
+                    <input list="MesList" name="DtMesList" id="DtMesList" placeholder="Mês">
+                    <datalist id="MesList">
+                        <option value="Jan">
+                        <option value="Fev">
+                        <option value="Mar">
+                        <option value="Abr">
+                        <option value="Mai">
+                        <option value="Jun">
+                        <option value="Jul">
+                        <option value="Ago">
+                        <option value="Set">
+                        <option value="Out">
+                        <option value="Nov">
+                        <option value="Dez">
+                    </datalist>
+                    <input list="AnoList" name="DtAnoList" id="DtAnoList" placeholder="Ano">
+                    <datalist id="AnoList">
+                        <option value="2020">
+                        <option value="2019">
+                        <option value="2018">
+                        <option value="2017">
+                        <option value="2016">
+                        <option value="2015">
+                        <option value="2014">
+                        <option value="2013">
+                        <option value="2012">
+                        <option value="2011">
+                        <option value="2010">
+                    </datalist>
+                </div>
+                
+                <p class="subtitle">Género <a href="#" class='info' onclick="alert('INFO!');">?</a></p>
+                <div class="subGrid">
+                    <span class="radio">
+                        <label for="Feminino">Feminino</label>
+                        <input type="radio" name="Genero" id="Feminino" value="F" onclick="MostrarPersonalizadoContainer()">
+                    </span>
+                    <span class="radio">
+                        <label for="Masculino">Masculino</label>
+                        <input type="radio" name="Genero" id="Masculino" value="M" onclick="MostrarPersonalizadoContainer()">
+                    </span>
+                    <span class="radio">
+                        <label for="Personalizado">Personalizar</label>
+                        <input type="radio" name="Genero" id="Personalizado" value="P" onclick="MostrarPersonalizadoContainer()">
+                    </span>
+                </div>
+
+                <div id="PersonalizadoContainer">
+                    <div class="subGrid">
+                        <select name="GeneroPronomeList" id="GeneroPronomeList">
+                            <option value="" disabled selected>Seleciona o teu pronome</option>
+                            <option value="1">Ela: "Deseja à tua amiga um feliz aniversário!"</option>
+                            <option value="2">Ele: "Deseja ao teu amigo um feliz aniversário!"</option>
+                            <option value="6">Neutro: "Deseja-lhe um feliz aniversário!"</option>
+                        </select>
+                    </div>
+                    <p class="subtitle bottomSpace">O teu pronome é visível para todas as pessoas.</p>
+                    <div class="subGrid">
+                        <input type="text" name="GeneroOpcional" id="GeneroOpcional" placeholder="Género (opcional)">            
+                    </div>
+                </div>
+
+                <p class="termo">
+                    Ao clicares em Regista-te, aceitas os nossos <a href="#">Termos</a>. Consulta a nossa 
+                    <a href="#">Política de Dados</a> para saberes como recolhemos, usamos e partilhamos 
+                    os teus dados e a <a href="#">Política de Cookies</a> para saberes como usamos os cookies 
+                    e tecnologias semelhantes. Poderás receber notificações nossas por SMS e cancelá-las a qualquer altura.
+                </p>
+
+                <details>
+                    <summary>Detalhamento</summary>
+                    <section>
+                        <div>Teste detalhado</div>
+                        <div>Teste detalhado2</div>
+                        <div>Teste detalhado3</div>
+                    </section>
+                </details>
+
+                <div class="formActions">
+                    <input type="submit" value="Cadastrar" onclick="alert('Cadastrado com sucesso!');">
+                </div>
+                
+            </form>
+        </div>        
+    </main>    
+</body>
+</html>
